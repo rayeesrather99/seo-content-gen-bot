@@ -1,9 +1,8 @@
 {
-  "name": "interactive-story-chatbot",
+  "name": "seo-content-gen-bot",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "Content-generator-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
@@ -19,8 +18,6 @@
     "@google/generative-ai": "^0.21.0",
     "dotenv": "^16.4.7",
     "framer-motion": "^11.16.0",
-    "fs": "^0.0.1-security",
-    "init": "^0.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0"

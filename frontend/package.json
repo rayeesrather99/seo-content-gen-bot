@@ -1,13 +1,11 @@
 {
-  "name": "seo-content-gen-bot",
+  "name": "seo-content-gen-bot-frontend",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "module", 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview"
   },
   "keywords": [],

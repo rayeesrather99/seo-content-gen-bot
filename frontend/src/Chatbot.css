@@ -1,0 +1,31 @@
+.chat-history {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height: 450px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .message {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .message.user {
+    background-color: #1078ad;
+    color: white;
+    text-align: right;
+  }
+  
+  .message.ai {
+    background-color: #e0e0e0;
+    color: #333;
+    text-align: left;
+  }
+  

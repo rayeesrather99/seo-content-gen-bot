@@ -1,0 +1,139 @@
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: space-between; /* Ensure space between the columns */
+    gap: 20px; /* Add spacing between columns */
+    flex-wrap: wrap; /* Allow columns to wrap in smaller screens */
+    width: 100%; /* Ensure container takes full width */
+    padding: 20px; /* Optional padding for the container */
+}
+
+/* Input and output columns */
+.input-column,
+.output-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 750px; /* Reduced the max width for a more compact look */
+    min-width: 500px; /* Adjusted the minimum width */
+    max-height: 450px; /* Reduced height to make it less bulky */
+    min-height: 400px; /* Adjusted minimum height */
+}
+
+/* Input form styling */
+.input-form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    flex-grow: 1; /* Allow the form to take available space */
+    overflow-y: auto; /* Allow the form to scroll if content overflows */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 10px; /* Reduced spacing for a compact look */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px; /* Adjusted font size */
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px; /* Adjusted font size */
+}
+
+/* Button styling */
+.generate-button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px; /* Reduced padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Adjusted font size */
+    margin-top: 10px;
+}
+
+.generate-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 675px) {
+    .container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center content */
+        gap: 15px; /* Adjust spacing */
+    }
+
+    .input-column,
+    .output-column {
+        flex-basis: 100%; /* Full width for mobile */
+        max-width: 100%; /* Ensure full width */
+        min-width: 300px; /* Allow smaller minimum width */
+        max-height: auto; /* Remove fixed height for better flexibility */
+    }
+
+    .input-form {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 6px; /* Adjust padding for smaller inputs */
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .generate-button {
+        padding: 8px 10px; /* Adjust button size */
+        font-size: 12px; /* Adjust font size */
+    }
+}
+
+/* Ultra-small screens */
+@media (max-width: 400px) {
+    .input-column,
+    .output-column {
+        min-width: 250px; /* Allow even smaller minimum width */
+    }
+
+    .input-form {
+        padding: 8px; /* Further reduce padding */
+    }
+
+    .form-group label {
+        font-size: 12px; /* Reduce label font size */
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 12px; /* Adjust input font size */
+        padding: 5px; /* Reduce padding */
+    }
+
+    .generate-button {
+        font-size: 12px; /* Adjust button font size */
+        padding: 6px 8px; /* Compact button size */
+    }
+}

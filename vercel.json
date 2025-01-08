@@ -1,23 +1,6 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "backend/content-generator-server.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/content-generator-server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "dist/index.html" 
-    }
+    { "src": "dist", "use": "@vercel/static" } 
   ]
 }

@@ -10,10 +10,11 @@ const port = process.env.PORT || 5000;
 // const frontendURL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 app.use(cors({
-    origin: 'https://seo-content-gen-bot-frontend.onrender.com/',
+    origin: 'https://seo-content-gen-bot-frontend.onrender.com', // Removed trailing slash
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 }));
+
 
 app.use(express.json());
 
@@ -123,6 +124,6 @@ app.post('/generate-content', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
+app.listen(port || 5000, () => {
     console.log(`Server running on http://localhost:${port}`);
 });

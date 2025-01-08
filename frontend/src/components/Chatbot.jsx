@@ -31,8 +31,9 @@ const Chatbot = () => {
         setSeoData(null);
 
         try {
-            // const backendUrl = import.meta.env.VITE_BACKEND_URL;
-            const response = await fetch('https://seo-content-gen-bot-backend.onrender.com/api/generate-content', {
+            const backendUrl = "https://seo-content-gen-bot-backend.onrender.com";
+
+            const response = await fetch(`${backendUrl}/api/generate-content`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

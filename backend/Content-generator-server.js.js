@@ -7,7 +7,7 @@ import generateSEO from './utils/seo-utils.js';
 
 const app = express();
 const port = process.env.PORT || 5000;
-const frontendURL = 'https://seo-content-gen-bot-frontend.onrender.com/';
+const frontendURL = process.env.FRONTEND_URL || 'http://localhost:5173';
 
 app.use(cors({
     origin: frontendURL,

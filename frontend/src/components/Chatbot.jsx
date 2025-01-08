@@ -31,7 +31,8 @@ const Chatbot = () => {
         setSeoData(null);
 
         try {
-            const response = await fetch("http://localhost:5000/generate-content", {
+            const backendUrl = import.meta.env.VITE_BACKEND_URL;
+            const response = await fetch(`${backendUrl}/api/generate-content`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

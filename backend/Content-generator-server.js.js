@@ -60,7 +60,7 @@ const generateContent = async (promptData) => {
     }
 };
 
-app.post('/generate-content', async (req, res) => {
+app.post('/api/generate-content', async (req, res) => {
     console.log("Incoming request to /generate-content:", req.body);
     try {
         const { topic, keywords, targetAudience, tone, contentType, length } = req.body;
